@@ -1,3 +1,4 @@
+import type { UpdateDatasetItemParams } from '@mastra/client-js';
 import { useQueryClient } from '@tanstack/react-query';
 import { Play, Sparkles, Clock, ChevronRight, ChevronDown, Pencil, Save, X, Trash2 } from 'lucide-react';
 import { useEffect, useState, useCallback, useRef, useMemo } from 'react';
@@ -21,7 +22,6 @@ import { Txt } from '@/ds/components/Txt';
 import { Icon } from '@/ds/icons/Icon';
 import { toast } from '@/lib/toast';
 import { cn } from '@/lib/utils';
-import { UpdateDatasetItemParams } from '@mastra/client-js';
 
 interface DatasetDetailViewProps {
   agentId: string;

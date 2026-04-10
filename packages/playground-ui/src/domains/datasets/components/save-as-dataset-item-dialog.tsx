@@ -1,5 +1,6 @@
 'use client';
 
+import type { AddDatasetItemParams } from '@mastra/client-js';
 import { DatabaseIcon } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import type { ReactNode } from 'react';
@@ -13,7 +14,6 @@ import type { SideDialogRootProps } from '@/ds/components/SideDialog';
 import { SideDialog } from '@/ds/components/SideDialog';
 import { TextAndIcon } from '@/ds/components/Text';
 import { toast } from '@/lib/toast';
-import { AddDatasetItemParams } from '@mastra/client-js';
 
 type SaveAsDatasetItemDialogProps = {
   initialInput: string;

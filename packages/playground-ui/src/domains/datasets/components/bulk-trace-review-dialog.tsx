@@ -1,5 +1,6 @@
 'use client';
 
+import type { AddDatasetItemParams } from '@mastra/client-js';
 import { ChevronLeftIcon, ChevronRightIcon, DatabaseIcon, Loader2Icon, TrashIcon } from 'lucide-react';
 import { useState, useCallback, useEffect } from 'react';
 import { useDatasetMutations } from '@/domains/datasets/hooks/use-dataset-mutations';
@@ -10,7 +11,6 @@ import { Label } from '@/ds/components/Label';
 import { SideDialog } from '@/ds/components/SideDialog';
 import { Txt } from '@/ds/components/Txt';
 import { toast } from '@/lib/toast';
-import { AddDatasetItemParams } from '@mastra/client-js';
 
 export type BulkTraceItem = {
   input: string;

@@ -1,5 +1,6 @@
 'use client';
 
+import type { AddDatasetItemParams } from '@mastra/client-js';
 import { useState } from 'react';
 import { useDatasetMutations } from '../hooks/use-dataset-mutations';
 import { Button } from '@/ds/components/Button';
@@ -7,7 +8,6 @@ import { CodeEditor } from '@/ds/components/CodeEditor';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogBody } from '@/ds/components/Dialog';
 import { Label } from '@/ds/components/Label';
 import { toast } from '@/lib/toast';
-import { AddDatasetItemParams } from '@mastra/client-js';
 
 /** Schema validation error from API */
 interface SchemaValidationError {

@@ -1,6 +1,6 @@
 import { v4 as uuid } from '@lukeed/uuid';
-import type { RuleGroup, RuleGroupDepth1, RuleGroupDepth2 } from '@mastra/core/storage';
 import { workspaceSnapshotConfigSchema } from '@mastra/client-js';
+import type { RuleGroup, RuleGroupDepth1, RuleGroupDepth2 } from '@mastra/core/storage';
 import { z } from 'zod';
 import type { JsonSchema } from '@/lib/json-schema';
 
