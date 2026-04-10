@@ -10,6 +10,7 @@ import { Label } from '@/ds/components/Label';
 import { SideDialog } from '@/ds/components/SideDialog';
 import { Txt } from '@/ds/components/Txt';
 import { toast } from '@/lib/toast';
+import { AddDatasetItemParams } from '@mastra/client-js';
 
 export type BulkTraceItem = {
   input: string;
@@ -105,7 +106,7 @@ export function BulkTraceReviewDialog({
       parsed.push({
         input: parsedInput,
         groundTruth: parsedGroundTruth,
-        expectedTrajectory: parsedTrajectory,
+        expectedTrajectory: parsedTrajectory as AddDatasetItemParams['expectedTrajectory'],
         ...(item.source ? { source: item.source } : {}),
       });
     }

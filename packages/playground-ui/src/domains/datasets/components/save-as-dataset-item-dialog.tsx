@@ -13,6 +13,7 @@ import type { SideDialogRootProps } from '@/ds/components/SideDialog';
 import { SideDialog } from '@/ds/components/SideDialog';
 import { TextAndIcon } from '@/ds/components/Text';
 import { toast } from '@/lib/toast';
+import { AddDatasetItemParams } from '@mastra/client-js';
 
 type SaveAsDatasetItemDialogProps = {
   initialInput: string;
@@ -114,7 +115,7 @@ export function SaveAsDatasetItemDialog({
         datasetId: selectedDatasetId,
         input: parsedInput,
         groundTruth: parsedGroundTruth,
-        expectedTrajectory: parsedTrajectory,
+        expectedTrajectory: parsedTrajectory as AddDatasetItemParams['expectedTrajectory'],
         ...(source ? { source } : {}),
       });
 

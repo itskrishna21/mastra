@@ -1,6 +1,6 @@
 'use client';
 
-import type { DatasetItem } from '@mastra/client-js';
+import type { DatasetItem, UpdateDatasetItemParams } from '@mastra/client-js';
 import { useState, useEffect } from 'react';
 import { useDatasetMutations } from '../../hooks/use-dataset-mutations';
 import { DatasetItemContent } from '../dataset-detail/dataset-item-content';
@@ -147,7 +147,7 @@ export function DatasetItemPanel({ datasetId, item, items, onItemChange, onClose
         input: parsedInput,
         groundTruth: parsedGroundTruth,
         metadata: parsedMetadata,
-        expectedTrajectory: parsedTrajectory,
+        expectedTrajectory: parsedTrajectory as UpdateDatasetItemParams['expectedTrajectory'],
       });
 
       toast.success('Item updated successfully');

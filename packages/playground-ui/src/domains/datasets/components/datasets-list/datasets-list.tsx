@@ -54,7 +54,7 @@ export function DatasetsList({ datasets, isLoading, error, search = '' }: Datase
       {filteredData.map(ds => {
         const name = truncateString(ds.name, 50);
         const description = truncateString(ds.description ?? '', 200);
-        const createdAt = ds.createdAt instanceof Date ? ds.createdAt : new Date(ds.createdAt);
+        const createdAt = new Date(ds.createdAt);
 
         return (
           <EntityList.RowLink key={ds.id} to={paths.datasetLink(ds.id)}>

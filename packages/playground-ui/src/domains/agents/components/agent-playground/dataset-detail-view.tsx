@@ -21,6 +21,7 @@ import { Txt } from '@/ds/components/Txt';
 import { Icon } from '@/ds/icons/Icon';
 import { toast } from '@/lib/toast';
 import { cn } from '@/lib/utils';
+import { UpdateDatasetItemParams } from '@mastra/client-js';
 
 interface DatasetDetailViewProps {
   agentId: string;
@@ -639,7 +640,7 @@ function ExpandedItemEditor({
         itemId: item.id,
         input: parsedInput,
         groundTruth: parsedGroundTruth,
-        expectedTrajectory: parsedTrajectory,
+        expectedTrajectory: parsedTrajectory as UpdateDatasetItemParams['expectedTrajectory'],
       });
       toast.success('Item updated');
       setIsEditing(false);
