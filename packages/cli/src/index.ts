@@ -192,6 +192,7 @@ const deployCommand = studioCommand
   .option('-y, --yes', 'Auto-accept defaults without confirmation')
   .option('-c, --config <file>', 'Project config file path (default: .mastra-project.json)')
   .option('--skip-build', 'Skip the build step and use existing .mastra/output')
+  .option('--debug', 'Enable debug logs', false)
   .action(wrapAction(deployAction));
 
 deployCommand.command('list').description('List deployed studios').action(wrapAction(deploysAction));
@@ -267,6 +268,7 @@ serverCommand
   .option('--project <id>', 'Project ID')
   .option('-y, --yes', 'Auto-accept defaults without confirmation')
   .option('-c, --config <file>', 'Project config file path (default: .mastra-project.json)')
+  .option('--debug', 'Enable debug logs', false)
   .action(wrapAction(serverDeployAction));
 
 const serverEnvCommand = serverCommand.command('env').description('Manage server environment variables');
